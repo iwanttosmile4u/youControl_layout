@@ -1,0 +1,26 @@
+@use './variables' as *;
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin universal-flex($display, $direction, $j-content, $a-items) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $j-content;
+  align-items: $a-items;
+}
+
+@mixin base-font-style($f-size, $f-weight, $color) {
+  font-size: $f-size;
+  font-weight: $f-weight;
+  color: $color;
+}

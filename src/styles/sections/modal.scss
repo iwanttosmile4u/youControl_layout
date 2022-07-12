@@ -1,0 +1,113 @@
+@use '../utils/index.scss' as *;
+
+.modal {
+  display: none;
+  padding: 20px 30px;
+
+  &__top-action {
+    @include universal-flex(flex, row, flex-end, center);
+  }
+
+  &__status-date {
+    @include universal-flex(flex, row, space-between, center);
+    margin: 30px 0 15px;
+  }
+
+  &__date {
+    @include base-font-style(13px, 400, $dateCardColor);
+  }
+
+  &__title {
+    @include base-font-style(32px, 500, $textColor);
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    @include base-font-style(16px, 400, $textColor);
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__checked {
+    @include universal-flex(flex, row, unset, center);
+    
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-right: 20px;
+    color: $mainGreen;
+  }
+
+  &__checked-text {
+    @include base-font-style(16px, 400, $textColor);
+  }
+
+  &__img {
+    position: relative;
+    @include universal-flex(flex, row, center, center);
+
+    background-color: $lighterGrey;
+
+    @include onTablet {
+      width: 100%;
+      background-color: unset;
+    }
+  }
+
+  &__bgr {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__middle-pic {
+    position: absolute;
+    top: -13px;
+
+    width: 320px;
+
+    @include onTablet {
+      width: 451px;
+      top: 35px;
+    }
+  }
+
+  &__top-pic {
+    width: 150px;
+
+    position: absolute;
+    top: 60px;
+
+    @include onTablet {
+      width: 226px;
+      top: 142px;
+    }
+  }
+
+  &__secondary-title {
+    margin: 170px 0 20px;
+
+    @include base-font-style(26px, 500, $textColor);
+    line-height: 26px;
+
+    @include onTablet {
+      margin-top: 50px;
+    }
+  }
+
+  &__bottom-text {
+    margin-bottom: 20px;
+    @include base-font-style(16px, 400, $textColor);
+    line-height: 24px;
+  }
+
+  &__bottom-action {
+    @include universal-flex(flex, row, flex-end, center);
+  }
+}

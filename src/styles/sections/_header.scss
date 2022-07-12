@@ -1,0 +1,98 @@
+@use '../utils/index.scss' as *;
+
+.header {
+  padding: 16px;
+
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 #00000033;
+
+  &__top-action {
+    @include universal-flex(flex, row, space-between, center);
+  }
+
+  &__logo-btn {
+    @include onDesktop {
+      width: 240px;
+    }
+  }
+
+  &__menu-btn {
+    margin: auto 85px auto 0;
+
+    cursor: pointer;
+  }
+
+  &__icons {
+    position: relative;
+
+    &--grey {
+      color: $greyColor;
+    }
+  }
+
+  &__notification {
+    display: inline-block;
+    padding: 2px 4px;
+
+    position: absolute;
+    bottom: 18px;
+    right: 50px;
+
+    @include base-font-style(10px, 700, $baseWhite);
+
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: $redColor;
+  }
+
+  &__icon-profile {
+    cursor: pointer;
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: $mainGreen;
+    }
+  }
+
+  &__icon-voicer {
+    cursor: pointer;
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: $mainGreen;
+    }
+  }
+
+  @include onTablet {
+    &__logo-btn {
+     @include universal-flex(flex, row, center, center);
+    }
+
+    &__icon-profile {
+      margin-left: 10px;
+    }
+
+    &__notification {
+      bottom: 16px;
+      right: 60px;
+
+      font-size: 12px;
+    }
+  }
+
+  @include onDesktop {
+    &__menu-btn {
+      margin: auto 0 auto 125px;
+    }
+
+    &__icon-profile {
+      margin-left: 15px;
+    }
+
+    &__notification {
+      padding: 3px 5px;
+
+      right: 63px;
+    }
+  }
+}

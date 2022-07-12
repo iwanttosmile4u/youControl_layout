@@ -1,0 +1,34 @@
+@use '../utils/index.scss' as *;
+
+.page {
+  font-family: 'Roboto', sans-serif;
+
+  &__header {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+
+    &:target {
+      transform: translateX(0);
+    }
+  }
+
+  &__main {
+    position: relative;
+  }
+
+  &__footer {
+    @include onDesktop {
+      margin-left: 230px;
+    }
+  }
+}

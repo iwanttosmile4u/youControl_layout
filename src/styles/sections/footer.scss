@@ -1,0 +1,143 @@
+@use '../utils/index.scss' as *;
+
+.footer {
+  padding: 50px 20px 35px;
+
+  &__wrapper {
+    @include universal-flex(flex, column, unset, unset);
+
+    @include onTablet {
+      @include universal-flex(flex, row, space-between, unset);
+    }
+  }
+
+  &__contancts {
+    @include universal-flex(flex, column, center, center);
+
+    @include onTablet {
+      @include universal-flex(flex, column, unset, unset);
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    @include base-font-style(14px, 500, $cardTextColor);
+    line-height: 16px;
+  }
+
+  &__phone {
+    display: inline-block;
+    margin: 5px 0 8px;
+    @include base-font-style(18px, 500, $textColor);
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+
+  &__email {
+    display: inline-block;
+    margin-bottom: 15px;
+    @include base-font-style(13px, 500, $blueBtnBgr);
+    line-height: 15px;
+  }
+
+  &__secondary-text {
+    display: inline-block;
+    margin-bottom: 8px;
+    @include base-font-style(14px, 500, $cardTextColor);
+    line-height: 16px;
+  }
+
+  &__nav {
+    @include universal-flex(flex, column, center, center);
+
+    @include onTablet {
+      @include universal-flex(flex, column, unset, unset);
+    }
+  }
+
+  &__nav-title {
+    margin: 20px 0 10px;
+    @include base-font-style(14px, 500, $textColor);
+    line-height: 16px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    @include base-font-style(13px, 400, $textColor);
+    line-height: 15px;
+  }
+
+  &__projects {
+    @include universal-flex(flex, column, center, center);
+
+    @include onTablet {
+      @include universal-flex(flex, column, unset, unset);
+    }
+  }
+
+  &__project-title {
+    margin: 20px 0 10px;
+    @include base-font-style(14px, 500, $textColor);
+  }
+
+  &__projects-wrapper {
+    @include universal-flex(flex, row, unset, center);
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__projects-content {
+    margin-left: 10px;
+    @include universal-flex(flex, column, unset, unset);
+  }
+
+  &__projects-title {
+    @include base-font-style(13px, 400, $textColor);
+    line-height: 13px;
+  }
+
+  &__projects-descr {
+    @include base-font-style(11px, 400, $cardTextColor);
+    line-height: 13px;
+  }
+
+  &__social {
+    @include universal-flex(flex, column, center, center);
+
+    @include onTablet {
+      @include universal-flex(flex, column, unset, unset);
+    }
+  }
+
+  &__social-icons {
+    @include onTablet {
+      @include universal-flex(flex, row, flex-end, center);
+    }
+  }
+
+  &__icon {
+    @include onTablet {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__copyright {
+    margin: 20px 0;
+    @include base-font-style(14px, 400, $cardTextColor);
+  }
+
+  &__price-text {
+    display: inline-block;
+    margin-top: 45px;
+    @include base-font-style(14px, 400, $cardTextColor);
+  }
+}

@@ -1,0 +1,74 @@
+@use '../utils/index.scss' as *;
+
+.tabs {
+  display: none;
+  
+  &__body {
+    padding: 42px 0 100px;
+    background-color: $hoverCardBgr;
+    // margin: 0 30px;
+
+    @include onTablet {
+      box-shadow: 2px 2px 4px 2px #00000033;
+    }
+  }
+
+  &__head {
+    @include universal-flex(flex, row, unset, unset);
+  }
+
+  &__toggle {
+    @include universal-flex(flex, row, center, center);
+    height: 40px;
+    padding: 12px 16px;
+    
+    @include base-font-style(11px, 400, $textColor);
+    text-transform: uppercase;
+    
+    background-color: $baseWhite;
+    border: 1px solid $lighterGrey;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &--active {
+      background-color: $hoverCardBgr;
+      border-bottom: none;
+    }
+
+    @include onDesktop {
+      height: 56px;
+      padding: 22px 28px;
+      &:first-child {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &__body-wrapper {
+    margin: 0 28px;
+  }
+
+  &__content {
+    margin: 0 25px;
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__title-wrapper {
+    background-color: $baseWhite;
+  }
+
+  &__title {
+    padding: 30px 0 20px 20px;
+
+    @include base-font-style(18px, 500, $textColor);
+    line-height: 21px;
+  }
+}

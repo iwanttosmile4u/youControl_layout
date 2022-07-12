@@ -1,0 +1,9 @@
+@use '../utils/index.scss' as *;
+
+.container {
+  padding: 0 20px;
+
+  &--reset {
+    padding: 0;
+  }
+}

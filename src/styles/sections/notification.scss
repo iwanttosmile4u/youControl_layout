@@ -1,0 +1,103 @@
+@use '../utils/index.scss' as *;
+
+.notification {
+  display: none;
+  background-color: $baseWhite;
+
+  animation: slide-left 1000ms forwards, fade-in 500ms forwards;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes slide-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @include onTablet {
+    box-shadow: 2px 2px 4px 2px #00000033;
+  }
+
+  &__close-btn {
+    padding: 1px;
+    position: absolute;
+    top: -30px;
+    right: 0;
+
+    background-color: $baseWhite;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 0 #00000033;
+
+    @include onTablet {
+      padding: 9px;
+      top: 13px;
+      right: 540px;
+    }
+
+    @include onDesktop {
+      padding: 12px;
+    }
+  }
+
+  &__title {
+    margin: 35px 0 20px 20px;
+    @include base-font-style(18px, 400, $secondaryGrey);
+    line-height: 19px;
+  }
+
+  &__card {
+    padding: 25px 15px 20px 20px;
+    border: 2px solid $lighterGrey;
+    transition: background-color 0.3s;
+
+    &:nth-child(odd) {
+      background-color: $lighterGrey;
+    }
+
+    &:hover {
+      background-color: $hoverCardBgr;
+    }
+  }
+
+  &__card-header {
+    @include universal-flex(flex, row, space-between, center);
+  }
+
+  &__card-date {
+    @include base-font-style(13px, 400, $dateCardColor);
+  }
+
+  &__card-title {
+    @include base-font-style(16px, 400, $textColor);
+    line-height: 14px;
+  }
+
+  &__card-body {
+    margin-top: 14px;
+  }
+
+  &__card-text {
+    @include base-font-style(14px, 400, $cardTextColor);
+    line-height: 14px;
+  }
+
+  &__btn-container {
+    margin-top: 12px;
+    padding: 16px 24px 24px;
+
+    @include universal-flex(flex, row, center, center);
+    background-color: $lighterGrey;
+  }
+}

@@ -1,0 +1,24 @@
+@use '../utils/index.scss' as *;
+
+.rounded-btn {
+  padding: 6px 8px;
+
+  @include base-font-style(14px, 700, $baseWhite);
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 12px;
+  background-color: $mainGreen;
+
+  &--red {
+    background-color: $redBtnBgr;
+  }
+
+  &--orange {
+    background-color: $orangeBtnBgr;
+  }
+
+  &--blue {
+    background-color: $blueBtnBgr;
+  }
+}

@@ -1,0 +1,26 @@
+@use '../utils/index.scss' as *;
+
+.btn {
+  padding: 12px 133px;
+
+  @include base-font-style(14px, 500, $baseWhite);
+  border: none;
+  border-radius: 3px;
+  background-color: $mainGreen;
+  transform: all 0.3s;
+
+  &--modal {
+    padding: 8px 22px;
+  }
+
+  &--footer {
+    width: 135px;
+    padding: 9px 15px;
+  }
+
+  &:hover {
+    color: $mainGreen;
+    border: 2px solid $mainGreen;
+    background-color: $baseWhite;
+  }
+}

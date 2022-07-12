@@ -1,0 +1,17 @@
+@use '../utils/index.scss' as *;
+
+.cards {
+  @include onDesktop {
+    margin-left: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    
+    @include onDesktop {
+      flex-basis: 33.33%;
+    }
+  }
+}

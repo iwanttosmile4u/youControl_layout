@@ -1,0 +1,7 @@
+@use '../utils/index.scss' as *;
+
+.logo {
+  @include onDesktop {
+    order: -1;
+  }
+}

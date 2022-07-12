@@ -1,0 +1,34 @@
+@use '../utils/index.scss' as *;
+
+.left-nav {
+  display: none;
+  background-color: $baseWhite;
+
+  @include onDesktop {
+    display: block;
+  }
+
+  &__item {
+    padding: 25px 0 25px 16px;
+    transition: color 0.3s, border-right 0.3s;
+   
+    &:last-child {
+      border-top: 2px solid $lighterGrey;
+    }
+
+    @include onDesktop {
+      &:hover {
+        background-color: $lighterGrey;
+        border-right: 4px solid $mainGreen;
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $mainGreen;
+    }
+  }
+}

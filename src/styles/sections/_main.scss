@@ -1,0 +1,47 @@
+@use '../utils/index.scss' as *;
+
+.main {
+  @include universal-flex(flex, row, unset, unset);
+
+  background-color: $lighterGrey;
+  &__left-nav {
+    width: 251px;
+  }
+
+  &__notification {
+    min-width: 320px;
+
+    position: absolute;
+    top: 35px;
+    right: 0;
+  
+    @include onTablet {
+      width: 540px;
+      height: 100vh;
+
+      top: 0;
+    }
+  }
+
+  &__tabs {
+    width: 100%;
+    min-height: 100vh;
+    margin: 60px 20px 0;
+
+    @include onDesktop {
+      margin: 140px 0;
+    }
+  }
+
+  &__modal {
+    width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+
+    @include onTablet {
+      width: 820px;
+      height: 820px;
+    }
+  }
+
+}

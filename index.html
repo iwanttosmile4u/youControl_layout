@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouControl</title>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="dist/css/style.min.css" />
+</head>
+<body class="body body--darker">
+<header class="header page__header">
+  <div class="header__top-action">
+    <div class="header__logo-btn">
+      <a href="#menu">
+        <img 
+          src="src/images/buttons/left-menu.svg" 
+          alt="Menu button"
+          class="header__menu-btn"
+        >
+      </a>
+      <a href="#" class="logo">
+        <img 
+          src="src/images/logo.svg" 
+          alt="YouControl logo" 
+          class="logo__img">
+      </a>
+    </div>
+    <div class="header__icons">
+      <span class="header__notification">5</span>
+      <svg 
+        class="header__icon-voicer"
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        fill="#8E8E8E" 
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="12" cy="12" r="12"/>
+        <path d="M17.6973 9.21619V13.8906C18.5737 13.5915 19.1998 12.6491 19.1998 11.5533C19.1998 10.4576 18.5737 9.51539 17.6973 9.21619Z" fill="white"/>
+        <path d="M16.2588 5.60065C15.8369 5.60065 15.5641 5.87313 15.5641 6.29505C14.5204 7.76529 12.5084 8.81697 10.1572 9.25857V13.848C12.5086 14.2898 14.5204 15.3413 15.5641 16.8115C15.5641 17.2336 15.8369 17.5059 16.2588 17.5059C16.6807 17.5059 16.9532 17.2334 16.9532 16.8115V6.29521C16.9532 5.87329 16.6807 5.60065 16.2588 5.60065Z" fill="white"/>
+        <path d="M9.36364 13.8102V9.29626H6.98252C5.65644 9.29626 4.7998 10.1529 4.7998 11.4788V11.6276C4.7998 12.9537 5.65644 13.8103 6.98252 13.8103H9.36364V13.8102Z" fill="white"/>
+        <path d="M9.06825 14.505H6.81641L7.59305 17.5669C7.75609 18.2098 8.27657 18.5194 8.91929 18.3567C9.56201 18.1935 9.87193 17.6732 9.70889 17.0304L9.06825 14.505Z" fill="white"/>
+      </svg>
+      <svg 
+        width="24" 
+        height="24" 
+        viewBox="0 0 24 24" 
+        fill="#8E8E8E" 
+        xmlns="http://www.w3.org/2000/svg" 
+        class="header__icon-profile"
+      >
+        <circle cx="12" cy="12" r="12"/>
+        <path d="M4.87988 16.6812C5.50809 16.2651 8.84356 14.9263 9.19256 14.9564C9.22746 14.5453 9.26735 14.1341 9.30225 13.718C9.30723 13.6729 9.2823 13.6127 9.25239 13.5826C8.83359 13.1815 8.77376 12.625 8.60923 12.1135C8.57931 12.0283 8.56436 11.938 8.53444 11.8277C8.25524 11.908 8.14057 11.7275 8.07575 11.5018C7.93116 10.9653 7.77661 10.4289 7.66692 9.88234C7.59712 9.5414 7.74171 9.4361 8.19042 9.4712C8.18045 9.3609 8.16051 9.2556 8.1655 9.15031C8.20538 8.318 8.24028 7.48569 8.31008 6.65338C8.33003 6.41271 8.42974 6.16202 8.55438 5.95143C9.20752 4.87344 10.1349 4.18152 11.4062 4.0311C12.9967 3.84559 14.2082 4.4974 15.1156 5.78597C15.4597 6.27232 15.5295 6.8389 15.5494 7.40547C15.5693 8.08736 15.5544 8.76925 15.5544 9.4712C15.6641 9.46117 15.7339 9.44112 15.8037 9.45115C15.9782 9.46619 16.1178 9.55142 16.0978 9.74697C16.033 10.4238 15.8785 11.0807 15.5843 11.6924C15.5444 11.7776 15.3849 11.8077 15.2104 11.903C15.1256 12.1787 15.0259 12.5497 14.9013 12.9057C14.8364 13.0912 14.7467 13.2818 14.622 13.4272C14.4824 13.5876 14.4376 13.7481 14.4625 13.9486C14.5024 14.2795 14.5323 14.6105 14.5672 14.9063C14.7417 14.9464 14.8963 14.9614 15.0309 15.0166C16.2175 15.508 17.4041 16.0043 18.5907 16.5007C18.6904 16.5408 18.7802 16.596 18.8799 16.6461C15.5295 20.9882 8.52946 21.2338 4.87988 16.6812Z" fill="white"/>
+      </svg>
+      <span class="material-icons header__icons--grey">expand_more</span>
+    </div>
+  </div>
+</header>
+
+<nav class="menu page__menu menu--mobile" id="menu">
+  <div class="menu__top">
+    <a href="#" class="material-icons icon--black">close</a>
+  </div>
+  <ul class="menu__list">
+    <li class="menu__list-item">
+      <span class="material-icons icon">dashboard</span>
+      <a href="#" class="menu__link">Дашборд</a>
+    </li>
+    <li class="menu__list-item">
+      <span class="material-icons icon">folder_shared</span>
+      <a href="#" class="menu__link">Пошук по досьє</a>
+    </li>
+    <li class="menu__list-item">
+      <span class="material-icons icon">visibility</span>
+      <a href="#" class="menu__link">Моніторинг</a>
+    </li>
+    <li class="menu__list-item menu__list-item--icons">
+      <div class="menu__item-icons">
+        <span class="material-icons icon">person</span>
+        <span class="material-icons icon icon--star">star</span>
+      </div>
+      <a href="#" class="menu__link">Мої контрагенти</a>
+    </li>
+    <li class="menu__list-item">
+      <span class="material-icons icon">lan</span>
+      <a href="#" class="menu__link">Пошук зв'язків</a>
+    </li>
+    <li class="menu__list-item">
+      <span class="material-icons icon">pie_chart</span>
+      <a href="#" class="menu__link">Ринки</a>
+    </li>
+    <li class="menu__list-item">
+      <span class="material-icons icon">checklist</span>
+      <a href="#" class="menu__link">Список реєстрів</a>
+    </li>
+    <li class="menu__list-item">
+      <span class="material-icons icon">info</span>
+      <a href="#" class="menu__link">Інформація</a>
+    </li>
+  </ul>
+</nav>
+
+<main class="main page__main">
+    <nav class="menu left-nav main__left-nav">
+      <ul class="menu__list left-nav__list">
+        <li class="menu__list-item left-nav__item">
+          <span class="material-icons icon left-nav__icon">dashboard</span>
+          <a href="#" class="menu__link left-nav__link">Дашборд</a>
+        </li>
+        <li class="menu__list-item left-nav__item">
+          <span class="material-icons icon">folder_shared</span>
+          <a href="#" class="menu__link left-nav__link">Пошук по досьє</a>
+        </li>
+        <li class="menu__list-item left-nav__item">
+          <span class="material-icons icon">visibility</span>
+          <a href="#" class="menu__link left-nav__link">Моніторинг</a>
+        </li>
+        <li class="menu__list-item menu__list-item--icons left-nav__item">
+          <div class="menu__item-icons">
+            <span class="material-icons icon">person</span>
+            <span class="material-icons icon icon--star">star</span>
+          </div>
+          <a href="#" class="menu__link left-nav__link">Мої контрагенти</a>
+        </li>
+        <li class="menu__list-item left-nav__item">
+          <span class="material-icons icon">lan</span>
+          <a href="#" class="menu__link left-nav__link">Пошук зв'язків</a>
+        </li>
+        <li class="menu__list-item left-nav__item">
+          <span class="material-icons icon">pie_chart</span>
+          <a href="#" class="menu__link left-nav__link">Ринки</a>
+        </li>
+        <li class="menu__list-item left-nav__item">
+          <span class="material-icons icon">checklist</span>
+          <a href="#" class="menu__link left-nav__link">Список реєстрів</a>
+        </li>
+        <li class="menu__list-item left-nav__item">
+          <span class="material-icons icon">info</span>
+          <a href="#" class="menu__link left-nav__link">Інформація</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- <div class="cards">
+      <div class="cards__item">
+        <img src="./src/images/pictures/Monitoring.png" alt="monitoring">
+      </div>
+
+      <div class="cards__item">
+        <img src="./src/images/pictures/Monitoring.png" alt="monitoring">
+      </div>
+
+      <div class="cards__item">
+        <img src="./src/images/pictures/Monitoring.png" alt="monitoring">
+      </div>
+
+      <div class="cards__item">
+        <img src="./src/images/pictures/Monitoring.png" alt="monitoring">
+      </div>
+
+      <div class="cards__item">
+        <img src="./src/images/pictures/Monitoring.png" alt="monitoring">
+      </div>
+
+      <div class="cards__item">
+        <img src="./src/images/pictures/Monitoring.png" alt="monitoring">
+      </div>
+    </div> -->
+
+    <section class="notification main__notification">
+      <h3 class="notification__title">Сповіщення від YouControl</h3>
+      <button class="notification__close-btn">
+        <span class="material-icons icon--black">close</span>
+      </button>
+      <div class="notification__content">
+
+        <div class="notification__card">
+          <div class="notification__card-header">
+            <button class="rounded-btn">оновлення</button>
+            <p class="notification__card-date">
+              Сьогодні 29.05.2019
+            </p>
+          </div>
+          <div class="notification__card-body">
+            <h4 class="notification__card-title">
+              Нові функції моніторинга
+            </h4>
+            <p class="notification__card-text">
+              Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+            </p>
+          </div>
+        </div>
+
+        <div class="notification__card">
+          <div class="notification__card-header">
+            <button class="rounded-btn">оновлення</button>
+            <p class="notification__card-date">
+              28.05.2019
+            </p>
+          </div>
+          <div class="notification__card-body">
+            <h4 class="notification__card-title">
+              Оновленна вкладка судових рішень
+            </h4>
+            <p class="notification__card-text">
+              Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+            </p>
+          </div>
+        </div>
+
+        <div class="notification__card">
+          <div class="notification__card-header">
+            <button class="rounded-btn rounded-btn--red">Гаряча новина</button>
+            <p class="notification__card-date">
+              28.05.2019
+            </p>
+          </div>
+          <div class="notification__card-body">
+            <h4 class="notification__card-title">
+              Сьогодні YouControl провів зустріч з представн...
+            </h4>
+            <p class="notification__card-text">
+              Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+            </p>
+          </div>
+        </div>
+
+        <div class="notification__card">
+          <div class="notification__card-header">
+            <button class="rounded-btn rounded-btn--orange">Вебінар</button>
+            <p class="notification__card-date">
+              28.05.2019
+            </p>
+          </div>
+          <div class="notification__card-body">
+            <h4 class="notification__card-title">
+              Нові функції моніторинга
+            </h4>
+            <p class="notification__card-text">
+              Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+            </p>
+          </div>
+        </div>
+
+        <div class="notification__card">
+          <div class="notification__card-header">
+            <button class="rounded-btn">оновлення</button>
+            <p class="notification__card-date">
+              28.05.2019
+            </p>
+          </div>
+          <div class="notification__card-body">
+            <h4 class="notification__card-title">
+              Нові функції моніторинга
+            </h4>
+            <p class="notification__card-text">
+              Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+            </p>
+          </div>
+        </div>
+
+        <div class="notification__card">
+          <div class="notification__card-header">
+            <button class="rounded-btn rounded-btn--blue">Зустріч</button>
+            <p class="notification__card-date">
+              28.05.2019
+            </p>
+          </div>
+          <div class="notification__card-body">
+            <h4 class="notification__card-title">
+              Сьогодні YouControl провів зустріч з представн...
+            </h4>
+            <p class="notification__card-text">
+              Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+            </p>
+          </div>
+        </div>
+
+        <div class="notification__btn-container">
+          <button class="btn">
+            Переглянути всі
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs main__tabs">
+     <div class="tabs__wrapper">
+      <div class="tabs__head">
+        <span class="tabs__toggle">Мій акаунт</span>
+        <span class="tabs__toggle">Історія транзакцій</span>
+        <span class="tabs__toggle tabs__toggle--active">Сповіщення</span>
+      </div>
+      <div class="tabs__body">
+       <div class="tabs__body-wrapper">
+        <div class="tabs__content">
+          <div class="tabs__title-wrapper">
+           <h2 class="tabs__title">Мій акаунт</h2>
+          </div>
+
+          <section class="notification tabs-notification">
+            <div class="notification__content">
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn">оновлення</button>
+                  <p class="notification__card-date">
+                    Сьогодні 29.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Нові функції моніторинга
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn">оновлення</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Оновленна вкладка судових рішень
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn rounded-btn--red">Гаряча новина</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Сьогодні YouControl провів зустріч з представн...
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn rounded-btn--orange">Вебінар</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Нові функції моніторинга
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn">оновлення</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Нові функції моніторинга
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn rounded-btn--blue">Зустріч</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Сьогодні YouControl провів зустріч з представн...
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+         </div>
+
+         <div class="tabs__content">
+            <div class="tabs__title-wrapper">
+              <h2 class="tabs__title">Ваші транзакції</h2>
+            </div>
+
+            <section class="notification tabs-notification">
+              <div class="notification__content">
+        
+                <div class="notification__card">
+                  <div class="notification__card-header">
+                    <button class="rounded-btn">оновлення</button>
+                    <p class="notification__card-date">
+                      Сьогодні 29.05.2019
+                    </p>
+                  </div>
+                  <div class="notification__card-body">
+                    <h4 class="notification__card-title">
+                      Нові функції моніторинга
+                    </h4>
+                    <p class="notification__card-text">
+                      Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                    </p>
+                  </div>
+                </div>
+        
+                <div class="notification__card">
+                  <div class="notification__card-header">
+                    <button class="rounded-btn">оновлення</button>
+                    <p class="notification__card-date">
+                      28.05.2019
+                    </p>
+                  </div>
+                  <div class="notification__card-body">
+                    <h4 class="notification__card-title">
+                      Оновленна вкладка судових рішень
+                    </h4>
+                    <p class="notification__card-text">
+                      Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                    </p>
+                  </div>
+                </div>
+        
+                <div class="notification__card">
+                  <div class="notification__card-header">
+                    <button class="rounded-btn rounded-btn--red">Гаряча новина</button>
+                    <p class="notification__card-date">
+                      28.05.2019
+                    </p>
+                  </div>
+                  <div class="notification__card-body">
+                    <h4 class="notification__card-title">
+                      Сьогодні YouControl провів зустріч з представн...
+                    </h4>
+                    <p class="notification__card-text">
+                      Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                    </p>
+                  </div>
+                </div>
+        
+                <div class="notification__card">
+                  <div class="notification__card-header">
+                    <button class="rounded-btn rounded-btn--orange">Вебінар</button>
+                    <p class="notification__card-date">
+                      28.05.2019
+                    </p>
+                  </div>
+                  <div class="notification__card-body">
+                    <h4 class="notification__card-title">
+                      Нові функції моніторинга
+                    </h4>
+                    <p class="notification__card-text">
+                      Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                    </p>
+                  </div>
+                </div>
+        
+                <div class="notification__card">
+                  <div class="notification__card-header">
+                    <button class="rounded-btn">оновлення</button>
+                    <p class="notification__card-date">
+                      28.05.2019
+                    </p>
+                  </div>
+                  <div class="notification__card-body">
+                    <h4 class="notification__card-title">
+                      Нові функції моніторинга
+                    </h4>
+                    <p class="notification__card-text">
+                      Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                    </p>
+                  </div>
+                </div>
+        
+                <div class="notification__card">
+                  <div class="notification__card-header">
+                    <button class="rounded-btn rounded-btn--blue">Зустріч</button>
+                    <p class="notification__card-date">
+                      28.05.2019
+                    </p>
+                  </div>
+                  <div class="notification__card-body">
+                    <h4 class="notification__card-title">
+                      Сьогодні YouControl провів зустріч з представн...
+                    </h4>
+                    <p class="notification__card-text">
+                      Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+         </div>
+         <div class="tabs__content tabs__content--active">
+          <div class="tabs__title-wrapper">
+            <h2 class="tabs__title">Ваші сповіщення</h2>
+          </div>
+
+          <section class="notification tabs-notification">
+            <div class="notification__content">
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn">оновлення</button>
+                  <p class="notification__card-date">
+                    Сьогодні 29.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Нові функції моніторинга
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn">оновлення</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Оновленна вкладка судових рішень
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn rounded-btn--red">Гаряча новина</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Сьогодні YouControl провів зустріч з представн...
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn rounded-btn--orange">Вебінар</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Нові функції моніторинга
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn">оновлення</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Нові функції моніторинга
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="notification__card">
+                <div class="notification__card-header">
+                  <button class="rounded-btn rounded-btn--blue">Зустріч</button>
+                  <p class="notification__card-date">
+                    28.05.2019
+                  </p>
+                </div>
+                <div class="notification__card-body">
+                  <h4 class="notification__card-title">
+                    Сьогодні YouControl провів зустріч з представн...
+                  </h4>
+                  <p class="notification__card-text">
+                    Uniquely fashion B2B content for one-to-one web-readiness. Continually embrace.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+         </div>
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <section class="modal main__modal">
+      <div class="modal__wrapper">
+        <div class="modal__top-action">
+          <a href="#" class="material-icons icon--black">close</a>
+        </div>
+        <div class="modal__status-date">
+          <button class="rounded-btn">оновлення</button>
+          <p class="modal__date">Сьогодні 29.05.2019</p>
+        </div>
+        <div class="modal__content">
+          <h2 class="modal__title">
+            Нові функції моніторингу
+          </h2>
+          <p class="modal__description">
+            Додайте свою компанію та головних контрагентів до моніторингу та 
+            першим дізнавайтесь про істотні зміни офіційних даних.
+          </p>
+          <div class="modal__checked">
+            <span class="material-icons modal__icon">done</span>
+            <p class="modal__checked-text">Нові кольори;</p>
+          </div>
+          <div class="modal__checked">
+            <span class="material-icons modal__icon">done</span>
+            <p class="modal__checked-text">Додавайте більше списків.</p>
+          </div>
+          <div class="modal__img">
+            <img src="./src/images/pictures/Rectangle 2.png" alt="Grey background" class="modal__bgr">
+            <img src="./src/images/pictures/image 3.png" alt="Colors" class="modal__middle-pic">
+            <img src="./src/images/pictures/image.png" alt="Filters" class="modal__top-pic">
+          </div>
+          <div class="modal__bottom-text">
+            <h3 class="modal__secondary-title">Що нового?</h3>
+            <p class="modal__bottom-text">
+              Якщо ви поставите в моніторинг власне підприємство, то отримаєте 
+              автоматичне сповіщення, якщо його дані в реєстрах змінилися без 
+              вашої участі. Зі звіту моніторингу ви можете дізнатися про нього 
+              навіть раніше співробітників самого підприємства, адже сповіщення 
+              з’явиться того самого дня. За своєю ініціативою контрагент навряд 
+              чи повідомить вам цю інформацію, а вона може бути критично 
+              важливою для вашої співпраці.
+            </p>
+          </div>
+
+          <div class="modal__bottom-action">
+            <button class="btn btn--modal">Наступне сповіщення</button>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+<footer class="footer page__footer">
+  <div class="footer__wrapper">
+    <div class="footer__contancts">
+      <span class="footer__text">
+        Дзвінок безкоштовний
+      </span>
+      <span class="footer__phone">0 800 309 077</span>
+      <span class="footer__email">mail@youcontrol.com.ua</span>
+      <span class="footer__secondary-text">Вирішили купувати?</span>
+      <button class="btn btn--footer">Заказать звонок</button>
+    </div>
+
+    <div class="footer__nav">
+      <h5 class="footer__nav-title">Для користувачів</h5>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="#" class="footer__link">Можливості</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Кейси</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Тарифи</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__projects">
+      <h5 class="footer__project-title">Наші проекти</h5>
+      <div class="footer__projects-wrapper">
+        <img src="./src/images/icons/youCont-logo.svg" alt="YouControl logo">
+        <div class="footer__projects-content">
+          <span class="footer__projects-title">YouScore</span>
+          <span class="footer__projects-descr">Доступ по API</span>
+        </div>
+      </div>
+      <div class="footer__projects-wrapper">
+        <img src="./src/images/icons/app-logo.svg" alt="YouControl logo">
+        <div class="footer__projects-content">
+          <span class="footer__projects-title">Додаток</span>
+          <span class="footer__projects-descr">Chrome, Mozilla</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer__social">
+      <p class="footer__copyright">
+        ©YouControl – повне досьє <br> на кожну компанію України
+      </p>
+      <div class="footer__social-icons">
+        <img src="./src/images/icons/i-facebook.png" alt="facebook" class="footer__icon">
+        <img src="./src/images/icons/i-youtube.png" alt="youtube" class="footer__icon">
+        <img src="./src/images/icons/linkedin.png" alt="linkedin" class="footer__icon">
+        <img src="./src/images/icons/telegram.png" alt="telegram" class="footer__icon">
+      </div>
+      <div class="footer__payment">
+        <span class="footer__price-text">
+          Сплачуйте онлайн:
+        </span>
+        <img src="./src/images/icons/i-mastercard_icon.png" alt="linkedin">
+        <img src="./src/images/icons/i-visa_icon.png" alt="telegram">
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="dist/js/index.min.js"></script>
+</body>
+</html>

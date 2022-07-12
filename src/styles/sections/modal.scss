@@ -3,6 +3,7 @@
 .modal {
   display: none;
   padding: 20px 30px;
+  background-color: $baseWhite;
 
   &__top-action {
     @include universal-flex(flex, row, flex-end, center);

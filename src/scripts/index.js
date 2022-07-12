@@ -3,23 +3,23 @@ const notificationBtn = document.querySelector('.header__icon-voicer');
 const closeMenu = document.querySelector('.notification__close-btn');
 const notificationItem = document.querySelector('.notification__card');
 const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.modal__top-action');
+const close = document.querySelector('.modal__top-action');
+
+function showModal() {
+  notificationList.style.display = 'none';
+  modal.style.display = 'block';
+}
+
+notificationItem.addEventListener('click', showModal);
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+  
+close.addEventListener('click', closeModal);  
 
 function show() {
   notificationList.style.display = 'block';
-
-  function showModal() {
-      notificationList.style.display = 'none';
-      modal.style.display = 'block';
-  }
-    
-  notificationItem.addEventListener('click', showModal);
-
-  // function closeModal() {
-  //   modal.style.display = 'none';
-  // }
-  
-  // closeModal.addEventListener('click', closeModal);  
 }
 
 notificationBtn.addEventListener('click', show);
